@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Priyanka Pandiyan — Web Developer | Freelancer</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts Poppins -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Animate On Scroll (AOS) CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body
+    style="
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f4f4;
+      color: #222;
+    "
+  >
+    <nav class="navbar">
+      <div class="container">
+        <a href="#home" class="navbar-brand">
+          <span class="logo-circle">P</span> Priyanka
+        </a>
+
+        <!-- Hamburger Toggle -->
+        <button class="navbar-toggle" aria-label="Toggle navigation">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+
+        <div class="navbar-links">
+          <ul class="nav-list text-white">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#showcase">Showcase</a></li>
+            <li><a href="#projects-blob">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <a href="#footer" class="btn btn-pro">Hire Me</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MAIN -->
+    <main id="home" class="container-fluid p-0">
+      <!-- HERO -->
+      <section class="hero-full-bg">
+        <div class="hero-content">
+          <!-- Glowing Profile Image -->
+          <div
+            class="hero-profile-circle hero-glow"
+            data-aos="zoom-in"
+            data-aos-duration="1200"
+          >
+            <img src="assets/Profile (1).jpg" alt="Profile" class="hero-img hover-glow" data-aos="fade-in"/>
+          </div>
+
+          <div class="hero-text">
+            <h6 class="hero-intro">
+              I am <span class="theme-text">PRIYANKA PANDIYAN</span>
+            </h6>
+            <h1 class="hero-name">
+              <span id="typer"></span>
+            </h1>
+            <p class="hero-desc">
+              Crafting dynamic full-stack web applications <br />
+              using MongoDB,&nbsp;Express,&nbsp;React,&nbsp;and&nbsp;Node.js.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="./assets/Resume.pdf" class="btn btn-fill-purple">Download CV</a>
+              <a href="#contact" class="btn btn-fill-purple">Contact</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="py-5">
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <!-- Left Text -->
+            <div
+              class="col-md-6 text-center text-md-start mb-4 mb-md-0"
+              data-aos="fade-right"
+            >
+              <h2 class="display-6 fw-extrabold mb-4">
+                <span class="theme-text">PROFESSIONAL</span> WEB DEVELOPER
+              </h2>
+              <p
+                class="lh-lg"
+                style="color: black; max-width: 600px; margin: 0 auto"
+              >
+                I'm <strong>PRIYANKA PANDIYAN</strong> — a passionate MERN Stack
+                Developer. I love creating dynamic, user-friendly web
+                applications and turning ideas into functional digital products.
+                Skilled in frontend and backend development, I enjoy solving
+                problems, learning new technologies, and building projects that
+                make an impact.
+              </p>
+              <a
+                href="#contact"
+                class="btn theme-btn fw-bold mt-3"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                Work with Me
+              </a>
+            </div>
+
+            <!-- Right Image -->
+            <div
+              class="col-md-6 text-center"
+              data-aos="zoom-in"
+              data-aos-delay="300"
+            >
+              <div
+                class="rounded-circle theme-border hover-glow shadow-soft mx-auto"
+                style="width: 300px; height: 300px"
+              >
+                <img
+                  src="assets/About.png"
+                  alt="About photo"
+                  class="img-fluid h-100 w-100 object-fit-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="py-5">
+        <div class="container">
+          <h2 class="text-center mb-5 skills-heading" data-aos="fade-down">
+            <span class="text-purple">MY</span>
+            <span class="text-dark">SKILLS</span>
+          </h2>
+          <div class="row g-4 justify-content-center">
+            <!-- Example Skills -->
+            <div
+              class="col-6 col-md-3"
+              data-aos="flip-left"
+              data-aos-delay="100"
+            >
+              <div class="skill">
+                <i class="devicon-html5-plain"></i>
+                <p>HTML</p>
+              </div>
+            </div>
+            <div
+              class="col-6 col-md-3"
+              data-aos="flip-right"
+              data-aos-delay="100"
+            >
+              <div class="skill">
+                <i class="devicon-css3-plain"></i>
+                <p>CSS</p>
+              </div>
+            </div>
+            <div
+              class="col-6 col-md-3"
+              data-aos="flip-left"
+              data-aos-delay="100"
+            >
+              <div class="skill">
+                <i class="devicon-javascript-plain"></i>
+                <p>JavaScript</p>
+              </div>
+            </div>
+            <div
+              class="col-6 col-md-3"
+              data-aos="flip-right"
+              data-aos-delay="100"
+            >
+              <div class="skill">
+                <i class="devicon-react-original"></i>
+                <p>React</p>
+              </div>
+            </div>
+            <div
+              class="col-6 col-md-3"
+              data-aos="flip-left"
+              data-aos-delay="100"
+            >
+              <div class="skill">
+                <i class="devicon-nodejs-plain"></i>
+                <p>Node.js</p>
+              </div>
+            </div>
+            <div
+              class="col-6 col-md-3"
+              data-aos="flip-right"
+              data-aos-delay="100"
+            >
+              <div class="skill">
+                <i class="devicon-express-original"></i>
+                <p>Express</p>
+              </div>
+            </div>
+            <div
+              class="col-6 col-md-3"
+              data-aos="flip-left"
+              data-aos-delay="100"
+            >
+              <div class="skill">
+                <i class="devicon-mongodb-plain"></i>
+                <p>MongoDB</p>
+              </div>
+            </div>
+            <div
+              class="col-6 col-md-3"
+              data-aos="flip-right"
+              data-aos-delay="100"
+            >
+              <div class="skill">
+                <i class="devicon-git-plain"></i>
+                <p>Git</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- SERVICES SECTION -->
+      <section id="services" class="services-section py-5">
+        <div class="container text-center">
+          <h2 class="services-heading mb-4">My Services</h2>
+          <p class="services-subtitle mb-5">
+            Key services I provide as a Full Stack Developer
+          </p>
+
+          <div class="row g-4">
+            <!-- Service 1 -->
+            <div class="col-md-4">
+              <div class="service-card h-100 shadow-sm border-0 rounded-3">
+                <div class="card-body">
+                  <div class="service-icon mb-3">
+                    <i class="bi bi-code-slash"></i>
+                  </div>
+                  <h5 class="service-title">Web Development</h5>
+                  <p class="service-desc">
+                    Building modern, responsive, scalable web apps using MERN
+                    stack.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="col-md-4">
+              <div class="service-card h-100 shadow-sm border-0 rounded-3">
+                <div class="card-body">
+                  <div class="service-icon mb-3">
+                    <i class="bi bi-phone"></i>
+                  </div>
+                  <h5 class="service-title">UI/UX Design</h5>
+                  <p class="service-desc">
+                    Clean, user-friendly interfaces with Bootstrap & modern CSS.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="col-md-4">
+              <div class="service-card h-100 shadow-sm border-0 rounded-3">
+                <div class="card-body">
+                  <div class="service-icon mb-3">
+                    <i class="bi bi-database"></i>
+                  </div>
+                  <h5 class="service-title">Database Management</h5>
+                  <p class="service-desc">
+                    Optimized databases using SQL & MongoDB for your apps.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SHOWCASE CAROUSEL -->
+      <section id="showcase" class="py-5" data-aos="fade-up">
+        <div class="container">
+          <h3 class="text-center mb-4 showcase-heading">
+            <span class="text-purple-gradient">Showcase</span>
+          </h3>
+
+          <div
+            id="projectsCarousel"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <!-- Indicators -->
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#projectsCarousel"
+                data-bs-slide-to="0"
+                class="active"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#projectsCarousel"
+                data-bs-slide-to="1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#projectsCarousel"
+                data-bs-slide-to="2"
+              ></button>
+            </div>
+
+            <!-- Carousel Inner -->
+            <div class="carousel-inner">
+              <!-- Project 1 -->
+              <div class="carousel-item active">
+                <div class="row justify-content-center">
+                  <div class="col-md-8 col-lg-6">
+                    <div
+                      class="card h-100 shadow-soft hover-glow overflow-hidden text-center"
+                    >
+                      <img
+                        src="assets/ecommerce.png"
+                        class="card-img-top"
+                        alt="Full-Stack MERN E-Commerce Platform"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title text-purple">
+                          Full-Stack MERN E-Commerce Platform
+                        </h5>
+                        <p class="card-text text-muted small">
+                          Developed a comprehensive online store using MongoDB,
+                          Express, React, and Node.js.
+                        </p>
+                        <a
+                          href="https://major-project-1-1-wpcw.onrender.com/"
+                          target="_blank"
+                          class="btn btn-sm btn-purple mt-2"
+                          >Live Demo</a
+                        >
+                        <a
+                          href="https://github.com/priyanka857/Major-Project-1.git"
+                          target="_blank"
+                          class="btn btn-sm btn-outline-purple mt-2"
+                          >Source</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 2 -->
+              <div class="carousel-item">
+                <div class="row justify-content-center">
+                  <div class="col-md-8 col-lg-6">
+                    <div
+                      class="card h-100 shadow-soft hover-glow overflow-hidden text-center"
+                    >
+                      <img
+                        src="assets/Ddos.png"
+                        class="card-img-top"
+                        alt="DDoS Attack Detection Streamlit App"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title text-purple">
+                          DDoS Attack Detection Streamlit App
+                        </h5>
+                        <p class="card-text text-muted small">
+                          ML-based app using CNN & LSTM for real-time DDoS
+                          detection with interactive visuals.
+                        </p>
+                        <a
+                          href="https://ddos-project-9ssg.onrender.com"
+                          target="_blank"
+                          class="btn btn-sm btn-purple mt-2"
+                          >Live Demo</a
+                        >
+                        <a
+                          href="https://github.com/priyanka857/DDos-Project"
+                          target="_blank"
+                          class="btn btn-sm btn-outline-purple mt-2"
+                          >Source</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 3 -->
+              <div class="carousel-item">
+                <div class="row justify-content-center">
+                  <div class="col-md-8 col-lg-6">
+                    <div
+                      class="card h-100 shadow-soft hover-glow overflow-hidden text-center"
+                    >
+                      <img
+                        src="assets/Socialmedia.png"
+                        class="card-img-top"
+                        alt="Social Media App"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title text-purple">
+                          Social Media Platform
+                        </h5>
+                        <p class="card-text text-muted small">
+                          React + Node.js + MongoDB app with authentication,
+                          real-time chat, profile & feeds.
+                        </p>
+                        <a
+                          href="https://socialmedia-frontend-jkwq.onrender.com/"
+                          target="_blank"
+                          class="btn btn-sm btn-purple mt-2"
+                          >Live Demo</a
+                        >
+                        <a
+                          href="https://github.com/priyanka857/Major-Project-2"
+                          target="_blank"
+                          class="btn btn-sm btn-outline-purple mt-2"
+                          >Source</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Controls -->
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#projectsCarousel"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon bg-purple rounded-circle p-3"
+              ></span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#projectsCarousel"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon bg-purple rounded-circle p-3"
+              ></span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS BLOB SECTION -->
+      <section id="projects-blob" class="py-5">
+        <div class="container">
+          <h3 class="text-center mb-5 text-purple-gradient" data-aos="fade-up">
+            Projects
+          </h3>
+          <p class="text-muted small mb-5 text-center">
+            ✨ Completed 14 Mini Projects showcasing core development skills and
+            problem-solving abilities.
+          </p>
+
+          <div
+            class="d-flex flex-wrap justify-content-center align-items-start gap-7"
+          >
+            <!-- Blob 1 -->
+            <div
+              class="project-blob text-center"
+              data-aos="flip-up"
+              data-aos-delay="100"
+            >
+              <div class="blob-shape">
+                <img src="assets/books.jpg" alt="Bookstore CRUD App" />
+              </div>
+              <p class="mt-3">Bookstore CRUD App</p>
+            </div>
+
+            <!-- Blob 2 -->
+            <div
+              class="project-blob text-center"
+              data-aos="flip-up"
+              data-aos-delay="200"
+            >
+              <div class="blob-shape">
+                <img src="assets/weather.avif" alt="Weather & News Apps" />
+              </div>
+              <p class="mt-3">Weather & News Apps</p>
+            </div>
+
+            <!-- Blob 3 -->
+            <div
+              class="project-blob text-center"
+              data-aos="flip-up"
+              data-aos-delay="300"
+            >
+              <div class="blob-shape">
+                <img src="assets/ecom.avif" alt="E-Commerce Site & Portfolio" />
+              </div>
+              <p class="mt-3">E-Commerce Site & Portfolio</p>
+            </div>
+
+            <!-- Blob 4 -->
+            <div
+              class="project-blob text-center"
+              data-aos="flip-up"
+              data-aos-delay="400"
+            >
+              <div class="blob-shape">
+                <img src="assets/todo.avif" alt="To-do App" />
+              </div>
+              <p class="mt-3">To-do App</p>
+            </div>
+
+            <!-- Blob 5 -->
+            <div
+              class="project-blob text-center"
+              data-aos="flip-up"
+              data-aos-delay="500"
+            >
+              <div class="blob-shape">
+                <img src="assets/digi.jpg" alt="Digital Resume" />
+              </div>
+              <p class="mt-3">Digital Resume</p>
+            </div>
+
+            <!-- Blob 6 -->
+            <div
+              class="project-blob text-center"
+              data-aos="flip-up"
+              data-aos-delay="600"
+            >
+              <div class="blob-shape">
+                <img src="assets/movie.jpg" alt="Movie-Rating App" />
+              </div>
+              <p class="mt-3">Movie-Rating App</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CERTIFICATIONS & RESEARCH -->
+      <section id="certifications" class="py-5" data-aos="fade-up">
+        <div class="container">
+          <h3 class="text-center mb-5 text-purple-gradient">
+            Certifications & Research
+          </h3>
+          <div class="row g-4 justify-content-center">
+            <!-- Certifications -->
+            <div class="col-lg-6 col-md-6 col-sm-8">
+              <ul class="cert-list">
+                <li>🎖 NCC “C” Certificate</li>
+                <li>💻 Full Stack Developer — Guvi</li>
+                <li>🏆 State Level Intercollegiate Meet Debug Winner</li>
+              </ul>
+            </div>
+
+            <!-- Research & Publications -->
+            <div class="col-lg-6 col-md-6 col-sm-8">
+              <div class="research-text">
+                <h4 class="text-purple fw-semibold mb-2">
+                  Research & Publications
+                </h4>
+                <p class="text-muted small">
+                  <strong
+                    >DDoS Detection in IoT using Deep Ensemble Learning</strong
+                  >
+                  — Final year MCA project proposing an optimized deep ensemble
+                  model for accurate DDoS detection in IoT networks. (ISBN:
+                  978-93-90084-81-4)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EDUCATION -->
+      <section id="education" class="py-5" data-aos="fade-up">
+        <div class="container">
+          <h3 class="text-center mb-5 text-purple-gradient">Education</h3>
+
+          <div class="timeline">
+            <!-- BCA -->
+            <div
+              class="timeline-item"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
+              <h4 class="text-purple fw-semibold">
+                Bachelor of Computer Applications — 2022–2025
+              </h4>
+              <p class="text-muted small">
+                Madurai Kamaraj University (MKU). Completed BCA with
+                <strong>87% CGPA</strong>. Built strong foundation in
+                programming, DS & algorithms, and project development.
+              </p>
+            </div>
+
+            <!-- Bootcamp -->
+            <div
+              class="timeline-item"
+              data-aos="fade-right"
+              data-aos-duration="1200"
+            >
+              <h4 class="text-purple fw-semibold">
+                Full Stack Development Bootcamp — 2025
+              </h4>
+              <p class="text-muted small">
+                Guvi Geeks Network (IITM Incubated). Industry-ready bootcamp
+                focused on HTML, CSS, JavaScript, React, Node.js, MongoDB, Git &
+                deployment.
+              </p>
+            </div>
+
+            <!-- MCA (Current) -->
+            <div
+              class="timeline-item"
+              data-aos="fade-right"
+              data-aos-duration="1400"
+            >
+              <h4 class="text-purple fw-semibold">MCA — Ongoing</h4>
+              <p class="text-muted small">
+                RVSCET, Coimbatore. Currently pursuing MCA to further strengthen
+                full-stack development skills.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="py-5" data-aos="fade-up">
+        <div class="container">
+          <h3 class="text-center mb-5 text-purple-gradient">Contact</h3>
+          <div class="row g-4 justify-content-center">
+            <!-- Contact Info -->
+            <div class="col-lg-5 col-md-6 col-sm-8">
+              <div class="contact-info">
+                <h4 class="text-purple fw-semibold mb-2">
+                  Let's build something!
+                </h4>
+                <p class="text-muted small mb-3">
+                  Mail or call me directly, or ping me on LinkedIn/GitHub.
+                </p>
+                <ul class="list-unstyled small mb-0">
+                  <li>
+                    📧
+                    <a
+                      href="mailto:priyankasuresh857@gmail.com"
+                      class="text-purple"
+                      >priyankasuresh857@gmail.com</a
+                    >
+                  </li>
+                  <li>
+                    📞
+                    <a href="tel:+918807906395" class="text-purple"
+                      >+91 8807906395</a
+                    >
+                  </li>
+                  <li>📍 Sivaganga, Tamil Nādu</li>
+                  <li>
+                    🔗
+                    <a
+                      href="https://linkedin.com/in/priyanka-s-a830a4301"
+                      target="_blank"
+                      class="text-purple"
+                      >LinkedIn</a
+                    >
+                    ·
+                    <a
+                      href="https://github.com/priyanka857"
+                      target="_blank"
+                      class="text-purple"
+                      >GitHub</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="col-lg-5 col-md-6 col-sm-8">
+              <form
+                class="contact-form"
+                onsubmit="event.preventDefault(); alert('Thanks! I\'ll get back to you shortly.'); this.reset();"
+              >
+                <div class="mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Your Name"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <textarea
+                    rows="4"
+                    class="form-control"
+                    placeholder="Message"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-purple w-100 fw-semibold">
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="py-4 text-center text-white">
+      <div class="container">
+        <p class="mb-1">
+          © <span id="year"></span> Priyanka Pandiyan. All rights reserved.
+        </p>
+        <p class="small">
+          Built with ❤️ using MERN stack | Inspired by modern portfolio designs
+        </p>
+        <div class="footer-links mt-2">
+          <a href="#home" class="text-purple mx-2">Home</a>
+          <a href="#about" class="text-purple mx-2">About</a>
+          <a href="#projects" class="text-purple mx-2">Projects</a>
+          <a href="#contact" class="text-purple mx-2">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS + Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Animate On Scroll (AOS) JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+
+    <script>
+      AOS.init();
+      // Dynamic footer year
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      //toggler
+      document.addEventListener("DOMContentLoaded", () => {
+        const toggleButton = document.querySelector(".navbar-toggle");
+        const navbarLinks = document.querySelector(".navbar-links");
+
+        toggleButton.addEventListener("click", () => {
+          toggleButton.classList.toggle("active"); // animate bars to cross
+          navbarLinks.classList.toggle("active"); // slide down links
+        });
+      });
+    </script>
+  </body>
+</html>
