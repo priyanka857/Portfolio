@@ -1,41 +1,46 @@
 // =============================
-// Typewriter Effect
+// Typewriter Effect (Fixed)
 // =============================
 const roles = [
-  "MERN Stack Developer ",
-  "Full Stack Innovator ",
-  "Web Developer | Freelancer ",
+  "MERN Stack Developer",
+  "Web Developer "," Freelancer",
 ];
 
 const el = document.getElementById("typer");
 let i = 0,
-  charI = 0,
-  erase = false;
+    charI = 0,
+    erase = false;
 
 function type() {
-  if (!el) return; // safety check if element not found
+  if (!el) return;
 
   const word = roles[i % roles.length];
 
-  // Typing
   if (!erase) {
-    el.innerHTML = `<span class="text-accent">${word.slice(0, charI)}</span>`;
+    el.textContent = word.slice(0, charI) || "\u00A0"; // avoid empty flicker
     charI++;
-    if (charI > word.length + 10) erase = true; // pause before erasing
-  }
-  // Erasing
-  else {
-    el.innerHTML = `<span class="text-accent">${word.slice(0, charI)}</span>`;
+    if (charI > word.length) {
+      erase = true;
+      setTimeout(type, 1000); // pause before erase
+      return;
+    }
+  } else {
+    el.textContent = word.slice(0, charI) || "\u00A0";
     charI--;
-    if (charI < 1) {
+    if (charI === 0) {
       erase = false;
       i++;
+      setTimeout(type, 500); // pause before next word
+      return;
     }
   }
 
-  setTimeout(type, erase ? 50 : 100); // slightly faster erase
+  setTimeout(type, erase ? 50 : 120);
 }
+
 type();
+
+
 
 // =============================
 // Dynamic Footer Year
@@ -59,7 +64,7 @@ tooltipTriggerList.forEach((tooltipTriggerEl) => {
 // AOS (Animate On Scroll)
 // =============================
 AOS.init({
-  duration: 800,   // smoother animation
+  duration: 500,   // smoother animation
   once: false,     // animation repeats when scrolling
   easing: "ease-in-out", // improved easing
 });
