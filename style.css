@@ -307,7 +307,36 @@ body {
   border: 5px solid #9e72f7;
   box-shadow: 0 0 25px rgba(111, 66, 193, 0.6);
   transition: all 0.3s ease-in-out;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+/* Image inside circle */
+#about .rounded-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* fills the circle */
+}
+
+/* Responsive for tablets */
+@media (max-width: 768px) {
+  #about .rounded-circle {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* Responsive for phones */
+@media (max-width: 480px) {
+  #about .rounded-circle {
+    width: 150px;
+    height: 150px;
+  }
+}
+
 
 #about .rounded-circle:hover {
   transform: translateY(-8px) scale(1.05);
