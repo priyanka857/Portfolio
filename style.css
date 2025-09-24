@@ -324,6 +324,7 @@ body {
 /* Responsive for tablets */
 @media (max-width: 768px) {
   #about .rounded-circle img{
+    object-fit: cover;
     width: 300px;
     height: 300px;
   }
@@ -332,6 +333,7 @@ body {
 /* Responsive for phones */
 @media (max-width: 480px) {
   #about .rounded-circle img{
+    object-fit: cover;
     width: 300px;
     height: 300px;
   }
