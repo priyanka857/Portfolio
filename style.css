@@ -234,13 +234,26 @@ body {
 #typer {
   color: #5a189a;
   font-weight: 700;
-  display: inline-block;        /* prevent layout shift */
-  white-space: nowrap;          /* avoid line breaks */
+  display: inline-block;
   border-right: 2px solid #9e72f7;
   animation: blink-caret 0.7s step-end infinite;
-  min-height: 3rem;             /* reserve height */
-  vertical-align: top;          /* keep alignment stable */
+  min-height: 3rem;
+  vertical-align: top;
+  max-width: 100%;        /* prevent overflow */
+  overflow: hidden;       /* hide extra chars if too long */
+  text-overflow: ellipsis;/* add "..." if text cuts */
+  white-space: nowrap;    /* keep typing effect on big screens */
 }
+
+/* On small screens, allow wrapping */
+@media (max-width: 480px) {
+  #typer {
+    white-space: normal;   /* allow wrapping */
+    text-align: center;
+    border-right: none;    /* optional → caret can be hidden */
+  }
+}
+
 
 @keyframes blink-caret {
   from, to { border-color: transparent; }
