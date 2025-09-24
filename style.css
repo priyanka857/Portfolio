@@ -856,16 +856,3 @@ body {
   }
 }
 
-/* HERO DESCRIPTION FIX FOR PHONES ONLY */
-@media (max-width: 480px) {
-  .hero-desc {
-    max-width: 90%;        /* prevent overflow */
-    white-space: normal;    /* allow wrapping */
-    word-wrap: break-word;  /* break long words if needed */
-    text-align: center;     /* center text */
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 0.9rem;     /* smaller font for phones */
-    line-height: 1.5;      /* better readability */
-  }
-}
