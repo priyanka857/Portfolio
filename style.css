@@ -348,7 +348,7 @@ h2 {
   line-height: 1.12;
 }
 .about-photo {
-  max-width: 320px;
+  max-width: 400px;
   margin: 0 auto;
   border-radius: 40px;
   backdrop-filter: blur(10px);
@@ -744,6 +744,14 @@ footer a {
   .hero-stats {
     justify-content: center;
   }
+  #about .row {
+  text-align: center;
+}
+
+.about-photo {
+  max-width: 360px;
+  margin: 0 auto 1.5rem;
+}
 
   .profile-stage {
     max-width: 390px;
@@ -752,6 +760,7 @@ footer a {
   .skill-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+  
 }
 
 @media (max-width: 575.98px) {
