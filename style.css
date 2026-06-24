@@ -829,3 +829,11 @@ footer a {
     text-align: center;
   }
 }
+@media (min-width: 1400px) {
+  .project-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  #projects .container {
+    max-width: 1500px;
+  }
+}
