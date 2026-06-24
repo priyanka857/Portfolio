@@ -1,70 +1,98 @@
-// =============================
-// Typewriter Effect (Fixed)
-// =============================
-const roles = [
-  "MERN Stack Developer",
-  "Web Developer "," Freelancer",
-];
+const roles = ["MERN Stack Developer", "Web Developer", "Freelancer"];
 
-const el = document.getElementById("typer");
-let i = 0,
-    charI = 0,
-    erase = false;
+const typer = document.getElementById("typer");
+let roleIndex = 0;
+let charIndex = 1;
+let deleting = false;
 
-function type() {
-  if (!el) return;
+function typeRole() {
+  if (!typer) return;
 
-  const word = roles[i % roles.length];
+  const currentRole = roles[roleIndex % roles.length];
+  typer.textContent = currentRole.slice(0, charIndex) || "\u00A0";
 
-  if (!erase) {
-    el.textContent = word.slice(0, charI) || "\u00A0"; // avoid empty flicker
-    charI++;
-    if (charI > word.length) {
-      erase = true;
-      setTimeout(type, 1000); // pause before erase
-      return;
-    }
-  } else {
-    el.textContent = word.slice(0, charI) || "\u00A0";
-    charI--;
-    if (charI === 0) {
-      erase = false;
-      i++;
-      setTimeout(type, 500); // pause before next word
-      return;
-    }
+  if (!deleting && charIndex <= currentRole.length) {
+    charIndex += 1;
+    setTimeout(typeRole, 95);
+    return;
   }
 
-  setTimeout(type, erase ? 50 : 120);
+  if (!deleting && charIndex > currentRole.length) {
+    deleting = true;
+    charIndex = currentRole.length;
+    setTimeout(typeRole, 1250);
+    return;
+  }
+
+  if (deleting && charIndex > 0) {
+    charIndex -= 1;
+    setTimeout(typeRole, 45);
+    return;
+  }
+
+  deleting = false;
+  roleIndex += 1;
+  setTimeout(typeRole, 360);
 }
 
-type();
+typeRole();
 
-
-
-// =============================
-// Dynamic Footer Year
-// =============================
 const yearEl = document.getElementById("year");
 if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
 
-// =============================
-// Bootstrap Tooltips
-// =============================
-const tooltipTriggerList = [].slice.call(
-  document.querySelectorAll('[data-bs-toggle="tooltip"]')
-);
-tooltipTriggerList.forEach((tooltipTriggerEl) => {
-  new bootstrap.Tooltip(tooltipTriggerEl);
+if (window.AOS) {
+  AOS.init({
+    duration: 650,
+    once: true,
+    easing: "ease-out-cubic",
+    offset: 80,
+  });
+}
+
+const navLinks = document.querySelectorAll(".nav-link");
+const navbarCollapse = document.getElementById("mainNavbar");
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    if (navbarCollapse?.classList.contains("show") && window.bootstrap) {
+      bootstrap.Collapse.getOrCreateInstance(navbarCollapse).hide();
+    }
+  });
 });
 
-// =============================
-// AOS (Animate On Scroll)
-// =============================
-AOS.init({
-  duration: 500,   // smoother animation
-  once: false,     // animation repeats when scrolling
-  easing: "ease-in-out", // improved easing
+const sections = [...document.querySelectorAll("main section[id]")];
+
+function setActiveNavLink() {
+  const current = sections.find((section) => {
+    const box = section.getBoundingClientRect();
+    return box.top <= 120 && box.bottom >= 120;
+  });
+
+  navLinks.forEach((link) => {
+    link.classList.toggle(
+      "active",
+      Boolean(current && link.getAttribute("href") === `#${current.id}`)
+    );
+  });
+}
+
+window.addEventListener("scroll", setActiveNavLink, { passive: true });
+setActiveNavLink();
+
+const contactForm = document.querySelector(".contact-form");
+contactForm?.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const formData = new FormData(contactForm);
+  const name = formData.get("name") || "there";
+  const email = formData.get("email") || "";
+  const message = formData.get("message") || "";
+  const subject = encodeURIComponent(`Portfolio enquiry from ${name}`);
+  const body = encodeURIComponent(
+    `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+  );
+
+  window.location.href = `mailto:priyankasuresh857@gmail.com?subject=${subject}&body=${body}`;
+  contactForm.reset();
 });
